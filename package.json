@@ -1,0 +1,23 @@
+{
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "My (0xKarambit) Portfolio website with a blog !",
+	"main": " ",
+	"scripts": {
+		"build": "tailwindcss -i ./src/input.css -o ./src/dist/output.css",
+		"dev": "tailwindcss -i ./src/input.css -o ./src/dist/output.css --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/HarshitJoshi9152/site.git"
+	},
+	"author": "HarshitJoshi9152",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/HarshitJoshi9152/site/issues"
+	},
+	"homepage": "https://github.com/HarshitJoshi9152/site#readme",
+	"devDependencies": {
+		"tailwindcss": "^3.3.2"
+	}
+}
