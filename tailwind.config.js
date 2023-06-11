@@ -9,8 +9,12 @@ module.exports = {
 			xl: "1440px"
 		},
 		extend: {
-			colors: {}
+			colors: {
+				primary: "grey-900",
+				primaryLight: "grey-700",
+				secondary: "#f7f7f7"
+			}
 		}
 	},
-	plugins: []
+	plugins: [require("@tailwindcss/typography")]
 };
