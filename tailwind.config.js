@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
 	content: ["./src/**/*.{html,js}"],
 	theme: {
@@ -10,11 +11,14 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				primary: "grey-900",
-				primaryLight: "grey-700",
-				secondary: "#f7f7f7"
+				primary: "#0f172a",
+				primaryLight: "#334155",
+				secondary: "#e2e8f0",
+				secondaryLight: "#f1f5f9"
 			}
 		}
 	},
-	plugins: [require("@tailwindcss/typography")]
+	plugins: [
+		require("@tailwindcss/typography"),
+	]
 };

@@ -6,21 +6,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Harshit Joshi</title>
 		<link rel="stylesheet" href="./dist/output.css" />
+
+		<style>
+				/* I Need to make a box-shadow using some shadow gen tool */
+				/* box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3); */
+		</style>
+		<script src="//unpkg.com/alpinejs" defer></script>
 	</head>
 	<body class="bg-[#f7f7f7]">
 		<!-- Header Container -->
 		<div class="responsive-container">
 			<!-- Header -->
-			<div class="flex items-center justify-between max-w-full">
+			<div class="flex max-w-full items-center justify-between">
 				<!-- Site Icon -->
-				<div class="text-lg font-bold cursor-pointer icon">
+				<div class="icon cursor-pointer text-lg">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="w-6 h-6"
+						class="h-6 w-6"
 					>
 						<path
 							stroke-linecap="round"
@@ -31,27 +37,27 @@
 				</div>
 				<!-- nav bar -->
 				<div
-					class="hidden max-w-full gap-2 text-lg md:flex justify-evenly"
+					class="hidden max-w-full justify-evenly gap-2 text-lg md:flex"
 				>
 					<a
-						class="p-2 px-3 font-semibold text-black capitalize rounded-md hover:bg-slate-900 hover:text-slate-50"
+						class="p-2 px-3 font-medium text-primary hover:text-slate-50 hover:bg-primary rounded-lg"
 						href="/blog"
-						>blog</a
+						>Blog</a
 					>
 					<a
-						class="p-2 px-3 font-semibold text-black capitalize rounded-md hover:bg-slate-900 hover:text-slate-50"
+						class="p-2 px-3 font-medium text-primary hover:text-slate-50 hover:bg-primary rounded-lg"
 						href="/projects"
-						>projects</a
+						>Projects</a
 					>
 					<a
-						class="p-2 px-3 font-semibold text-black capitalize rounded-md hover:bg-slate-900 hover:text-slate-50"
+						class="p-2 px-3 font-medium text-primary hover:text-slate-50 hover:bg-primary rounded-lg"
 						href="/resume"
-						>resume</a
+						>Resume</a
 					>
 					<a
-						class="p-2 px-3 font-semibold text-black capitalize rounded-md hover:bg-slate-900 hover:text-slate-50"
+						class="p-2 px-3 font-medium text-primary hover:text-slate-50 hover:bg-primary rounded-lg"
 						href="/contact"
-						>contact</a
+						>Contact</a
 					>
 				</div>
 
@@ -62,17 +68,60 @@
 		</div>
 
 		<!-- Hero Section -->
-		<section class="mt-12 responsive-container bg-zinc-800">
-			<div class="flex justify-evenly">
-				<h1 class="text-4xl text-bold text-zinc-200">Harshit Joshi</h1>
-				<h1 class="text-4xl text-bold text-zinc-200">Harshit Joshi</h1>
-				<h1 class="text-4xl text-bold text-zinc-200">Harshit Joshi</h1>
-				<h1 class="text-4xl text-bold text-zinc-200">Harshit Joshi</h1>
+		<section class="responsive-container mt-12">
+			<!-- Grid Container 8 by 6 -->
+			<div
+				class="bio-grid m-auto grid h-96 max-w-4xl grid-cols-8 grid-rows-6 gap-8 rounded-3xl"
+				class="outline-dashed outline-2 outline-stone-900"
+			>
+				<!-- Image container -->
+				<img class="col-span-2 row-span-4 h-full w-full rounded-3xl object-cover"
+					src="./assets/me.jpg"
+					alt="My Image"
+				/>
+				<!-- Name, Status, Bio etc...   -->
+				<div class="col-span-6 row-span-4">
+					<div class="intro p-2">
+						<!-- <p class="text-3xl">Hi, I am</p> -->
+						<h2 class="w-fit text-5xl font-semibold text-stone-900">
+							Harshit Joshi
+						</h2>
+						<h3 class="mt-1 text-2xl">
+							Web Developer & Software Engineer
+						</h3>
+						<p class="text-lg mt-1">status: procrastinating;</p>
+					</div>
+					<div class="aboutme mt-2">
+						<!-- <p class="font-semibold">About me</p>
+						<p>I like to code and build projects</p> -->
+						<!-- <div class="skills">
+							<p class="font-semibold">Skills</p>
+							<p>C/C++, Python, JS, TS, Rust</p>
+							<p>React, Tailwindcss, Typescript, MongoDB, PostgeSQL</p>
+						</div> -->
+					</div>
+				</div>
+				
+				<div class="timezone col-span-2 row-span-2 bg-amber-200 rounded-3xl text-center font-semibold grid place-items-center">
+					<ul class="text-left">
+						<p>India</p>
+						<p id="time"> </p> 
+						<p>harsjoshi1614@gmail.com</p>
+					</ul>
+				</div>
+
+				<!-- About me Section ....???? -->
+				<div class="col-span-6 row-span-2">
+					<img src="http://ghchart.rshah.org/HarshitJoshi9152" alt="HarshitJoshi9152's Github chart" />
+				</div>
 			</div>
 		</section>
 
 		<!-- projects carousle and blog posts -->
 		<section></section>
+
+		<!-- Blog Posts -->
 		<section></section>
+		<script src="./index.js"></script>
 	</body>
 </html>
