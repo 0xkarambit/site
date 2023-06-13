@@ -24,7 +24,7 @@
 				transition: transform 0.4s;
 			}
 			div.socials > *:hover{
-				transform: scale(1.1) rotate(354deg);
+				transform: scale(1.4) rotate(354deg);
 			}
 
 			/* This is a hack and i dont like ... it  */
@@ -140,14 +140,14 @@
 			<!-- Grid Container 8 by 6 -->
 			<!-- Going Mobile First we have grid-cols-3 grid-rows-auto AND we need to set a new height !-->
 			<div
-				class="bio-grid m-auto flex max-w-4xl flex-col  justify-center gap-8 rounded-3xl md:grid md:h-5/6 md:grid-cols-8 md:grid-rows-6 md:items-start md:justify-start"
+				class="bio-grid m-auto flex max-w-4xl flex-col gap-3 justify-center md:gap-8 rounded-3xl md:grid md:h-5/6 md:grid-cols-8 md:grid-rows-6 md:items-start md:justify-start"
 			>
 				<!-- class="outline-dashed outline-2 outline-stone-900" -->
 				<!-- Image for Mobile Viewport -->
 				<div class="md:hidden">
 					<img
 						id="#myimg"
-						class="aspect-square w-64 rounded-full object-cover"
+						class="aspect-square w-56 rounded-3xl object-cover"
 						src="./assets/me.jpg"
 						alt="My Image"
 					/>
@@ -177,18 +177,17 @@
 						<p class="mt-1 text-lg">
 							Currently Learning: Unity & Machine Learning
 						</p>
-						<!-- TODO: add socials and insta, discord, github, twitter, linkedin,  -->
 					</div>
 				</div>
 
 				<!-- Socials -->
 				<div class="socials flex justify-start gap-4 col-span-6 row-span-1 ml-3 items-center">
-					<img src="./assets/logo-instagram.png" alt="" class="w-10 rounded-xl" title="@harshit_.dev">
-					<img src="./assets/logo-discord.svg" alt="" class="w-10 rounded-xl" title="Karambit#0228">
-					<img src="./assets/logo-github.png" alt="" class="w-10 rounded-xl" title="HarshitJoshi9152">
-					<img src="./assets/logo-twitter.png" alt="" class="w-10 rounded-xl" title="0xHarshitJoshi">
-					<img src="./assets/logo-linkedin.png" alt="" class="w-10 rounded-xl" title="harshit-joshi-dev">
-					<img src="./assets/logo-gmail.png" alt="" class="w-10 rounded-xl" title="harsjoshi1614@gmail.com">
+					<a target="_blank" rel="noopener noreferrer" href="https://instagram.com/harshit_.dev"><img src="./assets/socials/logo-instagram.png" alt="" class="w-10 rounded-xl" title="@harshit_.dev"></a>
+					<a target="_blank" rel="noopener noreferrer" href="https://discordapp.com/users/Karambit#0228"><img src="./assets/socials/logo-discord.png" alt="" class="w-10 rounded-xl" title="Karambit#0228"></a>
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/HarshitJoshi9152"><img src="./assets/socials/logo-github.png" alt="" class="w-10 rounded-xl" title="HarshitJoshi9152"></a>
+					<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/0xHarshitJoshi"><img src="./assets/socials/logo-twitter.png" alt="" class="w-10 rounded-xl" title="0xHarshitJoshi"></a>
+					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/harshit-joshi-dev"><img src="./assets/socials/logo-linkedin.png" alt="" class="w-10 rounded-xl" title="harshit-joshi-dev"></a>
+					<a target="_blank" rel="noopener noreferrer" href="mailto:harsjoshi1614@gmail.com"><img src="./assets/socials/logo-gmail.png" alt="" class="w-10 rounded-xl" title="harsjoshi1614@gmail.com"></a>
 				</div>
 
 				<!-- Timezone -->
@@ -205,9 +204,9 @@
 							<i class="fa-solid fa-clock inline"></i>
 							<p id="time" class="inline"></p>
 						</span>
-						<span>
+						<!-- <span>
 							<p class="hidden lg:block"><i class="fa-solid fa-bell"></i> Hours : 9 am - 8 pm</p>
-						</span>
+						</span> -->
 					</ul>
 				</div>
 

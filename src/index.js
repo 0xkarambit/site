@@ -13,11 +13,11 @@ function getTime() {
 const timeElm = document.querySelector("#time");
 
 window.onload = () => {
-	timeElm.innerHTML = getTime() + " (UTC +5:30)";
+	timeElm.innerHTML = getTime() + " (UTC+5:30)";
 };
 
 setInterval(() => {
-	timeElm.innerText = getTime() + " (UTC +5:30)";
+	timeElm.innerText = getTime() + " (UTC+5:30)";
 }, 60 * 1000);
 
 // Nav Bar Mobile Roll Back/Up
