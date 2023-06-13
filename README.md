@@ -2,6 +2,8 @@
 
 The codebase for my personal website
 
+![Screenshot](site.png)
+
 # Development
 
 ```console

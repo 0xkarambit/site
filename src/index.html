@@ -51,6 +51,7 @@
 			}
 
 		</style>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<!-- <script src="//unpkg.com/alpinejs" defer></script> -->
 	</head>
 	<body class="bg-[#f7f7f7]">
@@ -106,7 +107,7 @@
 
 				<!-- Hamburger (only show on mobile !) -->
 			</div>
-			<!-- Hamburger-links -->
+			<!-- Hamburger-links for Mobile Layout -->
 			<div
 				id="hamburger-links"
 				class="hidden flex-col items-center md:hidden"
@@ -139,10 +140,10 @@
 			<!-- Grid Container 8 by 6 -->
 			<!-- Going Mobile First we have grid-cols-3 grid-rows-auto AND we need to set a new height !-->
 			<div
-				class="bio-grid m-auto flex max-w-4xl flex-col items-center justify-center gap-8 rounded-3xl md:grid md:h-96 md:grid-cols-8 md:grid-rows-6 md:items-start md:justify-start"
+				class="bio-grid m-auto flex max-w-4xl flex-col  justify-center gap-8 rounded-3xl md:grid md:h-5/6 md:grid-cols-8 md:grid-rows-6 md:items-start md:justify-start"
 			>
 				<!-- class="outline-dashed outline-2 outline-stone-900" -->
-				<!-- Image container -->
+				<!-- Image for Mobile Viewport -->
 				<div class="md:hidden">
 					<img
 						id="#myimg"
@@ -151,10 +152,10 @@
 						alt="My Image"
 					/>
 				</div>
-				<!-- Image for Mobile Viewport -->
+				<!-- Image container -->
 				<img
 					id="#myimg"
-					class="hidden h-full w-full rounded-3xl object-cover md:col-span-2 md:row-span-4 md:block"
+					class="hidden h-full w-full object-cover md:col-span-2 md:row-span-4 md:block rounded-3xl outline-2 outline"
 					src="./assets/me.jpg"
 					alt="My Image"
 				/>
@@ -180,6 +181,7 @@
 					</div>
 				</div>
 
+				<!-- Socials -->
 				<div class="socials flex justify-start gap-4 col-span-6 row-span-1 ml-3 items-center">
 					<img src="./assets/logo-instagram.png" alt="" class="w-10 rounded-xl" title="@harshit_.dev">
 					<img src="./assets/logo-discord.svg" alt="" class="w-10 rounded-xl" title="Karambit#0228">
@@ -192,22 +194,32 @@
 				<!-- Timezone -->
 				<div
 					id="#mytimezone"
-					class="timezone col-span-2 row-span-2 hidden place-items-center rounded-3xl bg-green-200 p-4 text-center font-semibold md:grid"
+					class="timezone col-span-2 row-span-2 hidden place-items-center rounded-3xl outline-2 outline  p-4 text-center font-semibold md:grid"
 				>
 					<ul class="text-left">
-						<p>India</p>
-						<p id="time"></p>
-						<p class="hidden lg:block">Hours : 9 am - 8 pm</p>
+						<span>
+							
+							<p><i class="fa-solid fa-location-dot"></i> India</p>
+						</span>
+						<span>
+							<i class="fa-solid fa-clock inline"></i>
+							<p id="time" class="inline"></p>
+						</span>
+						<span>
+							<p class="hidden lg:block"><i class="fa-solid fa-bell"></i> Hours : 9 am - 8 pm</p>
+						</span>
 					</ul>
 				</div>
 
 				<!-- Github Contributions -->
-				<div id="#mycontributions" class="col-span-6 row-span-2">
-					<img
-						src="http://ghchart.rshah.org/HarshitJoshi9152"
-						alt="HarshitJoshi9152's Github chart"
-					/>
-				</div>
+					<div class="col-span-6 row-span-2 ">
+						<img
+							id="#mycontributions"
+							class="object-cover object-right h-full"
+							src="http://ghchart.rshah.org/HarshitJoshi9152"
+							alt="HarshitJoshi9152's Github chart"
+						/>
+					</div>
 			</div>
 		</section>
 
@@ -227,7 +239,8 @@
 		<!-- Add QUOTES to the CARD UI -->
 		<!-- Should i move the time thing to the Bio instead, Atleast on mobile ....???? -->
 		<!-- NonTechnicalBlogs Nah just make it a #tag -->
-		<!-- Todo Experiment -->
+		<!-- [&>*]:outline-2 [&>*]:rounded-3xl [&>*]:outline -->
+		<!-- Todo Experiment,  -->
 		<script src="./index.js"></script>
 	</body>
 </html>
