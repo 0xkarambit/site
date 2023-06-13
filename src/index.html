@@ -8,54 +8,73 @@
 		<link rel="stylesheet" href="./dist/output.css" />
 
 		<style>
-				/* I Need to make a box-shadow using some shadow gen tool */
-				/* box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3); */
+			/* I Need to make a box-shadow using some shadow gen tool */
+			.bio-grid > * {
+				/* box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+					border-radius: 1.5rem; */
+
+				transition: all 0.2s;
+			}
+			.bio-grid > *:hover {
+				transform: scale(1.02);
+			}
+
+			/* This is a hack and i dont like ... it  */
+			@media (min-width: 1440px) {
+				.container {
+					max-width: 976px;
+				}
+				.responsive-container {
+					max-width: 976px;
+				}
+			}
 		</style>
-		<script src="//unpkg.com/alpinejs" defer></script>
+		<!-- <script src="//unpkg.com/alpinejs" defer></script> -->
 	</head>
-	<body class="bg-[#f7f7f7]">
+	<body class="h-[3000px] bg-[#f7f7f7]">
 		<!-- Header Container -->
-		<div class="responsive-container">
+		<div
+			id="nav"
+			class="responsive-container sticky top-0 z-10 bg-transparent py-2 backdrop-blur-lg transition-[top] duration-300"
+		>
 			<!-- Header -->
 			<div class="flex max-w-full items-center justify-between">
 				<!-- Site Icon -->
 				<div class="icon cursor-pointer text-lg">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						class="h-6 w-6"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-						/>
-					</svg>
+					<img
+						src="./assets/me.jpg"
+						alt="Home"
+						class="aspect-square w-10 rounded-full object-cover"
+					/>
+				</div>
+				<!-- nav mobile Hamburger -->
+				<div
+					id="hamburger"
+					class="aspect-square w-10 cursor-pointer text-4xl md:hidden"
+				>
+					☰
 				</div>
 				<!-- nav bar -->
 				<div
 					class="hidden max-w-full justify-evenly gap-2 text-lg md:flex"
 				>
 					<a
-						class="p-2 px-3 font-medium text-primary hover:text-slate-50 hover:bg-primary rounded-lg"
+						class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
 						href="/blog"
 						>Blog</a
 					>
 					<a
-						class="p-2 px-3 font-medium text-primary hover:text-slate-50 hover:bg-primary rounded-lg"
+						class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
 						href="/projects"
 						>Projects</a
 					>
 					<a
-						class="p-2 px-3 font-medium text-primary hover:text-slate-50 hover:bg-primary rounded-lg"
-						href="/resume"
-						>Resume</a
+						class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
+						href="https://github.com/HarshitJoshi9152"
+						>Github</a
 					>
 					<a
-						class="p-2 px-3 font-medium text-primary hover:text-slate-50 hover:bg-primary rounded-lg"
+						class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
 						href="/contact"
 						>Contact</a
 					>
@@ -65,63 +84,112 @@
 
 				<!-- Hamburger (only show on mobile !) -->
 			</div>
+			<!-- Hamburger-links -->
+			<div
+				id="hamburger-links"
+				class="justify-left hidden flex-col items-center md:hidden"
+			>
+				<a
+					class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
+					href="/blog"
+					>Blog</a
+				>
+				<a
+					class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
+					href="/projects"
+					>Projects</a
+				>
+				<a
+					class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
+					href="https://github.com/HarshitJoshi9152"
+					>Github</a
+				>
+				<a
+					class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
+					href="/contact"
+					>Contact</a
+				>
+			</div>
 		</div>
 
 		<!-- Hero Section -->
-		<section class="responsive-container mt-12">
+		<section class="responsive-container mt-2 md:mt-12">
 			<!-- Grid Container 8 by 6 -->
+			<!-- Going Mobile First we have grid-cols-3 grid-rows-auto AND we need to set a new height !-->
 			<div
-				class="bio-grid m-auto grid h-96 max-w-4xl grid-cols-8 grid-rows-6 gap-8 rounded-3xl"
-				class="outline-dashed outline-2 outline-stone-900"
+				class="bio-grid m-auto flex max-w-4xl flex-col items-center justify-center gap-8 rounded-3xl md:grid md:h-96 md:grid-cols-8 md:grid-rows-6 md:items-start md:justify-start"
 			>
+				<!-- class="outline-dashed outline-2 outline-stone-900" -->
 				<!-- Image container -->
-				<img class="col-span-2 row-span-4 h-full w-full rounded-3xl object-cover"
+				<div class="md:hidden">
+					<img
+						id="#myimg"
+						class="aspect-square w-64 rounded-full object-cover"
+						src="./assets/me.jpg"
+						alt="My Image"
+					/>
+				</div>
+				<img
+					id="#myimg"
+					class="hidden h-full w-full rounded-3xl object-cover md:col-span-2 md:row-span-4 md:block"
 					src="./assets/me.jpg"
 					alt="My Image"
 				/>
+
 				<!-- Name, Status, Bio etc...   -->
-				<div class="col-span-6 row-span-4">
+				<div id="#mybio" class="col-span-6 row-span-4">
 					<div class="intro p-2">
-						<!-- <p class="text-3xl">Hi, I am</p> -->
 						<h2 class="w-fit text-5xl font-semibold text-stone-900">
 							Harshit Joshi
 						</h2>
 						<h3 class="mt-1 text-2xl">
 							Web Developer & Software Engineer
 						</h3>
-						<p class="text-lg mt-1">status: procrastinating;</p>
-					</div>
-					<div class="aboutme mt-2">
-						<!-- <p class="font-semibold">About me</p>
-						<p>I like to code and build projects</p> -->
-						<!-- <div class="skills">
-							<p class="font-semibold">Skills</p>
-							<p>C/C++, Python, JS, TS, Rust</p>
-							<p>React, Tailwindcss, Typescript, MongoDB, PostgeSQL</p>
-						</div> -->
+						<p class="mt-4 font-semibold">About me</p>
+						<p class="mt-1 text-lg">
+							I like writing code.. and building projects..
+						</p>
+						<!-- TODO: add socials and insta, discord, github, twitter, linkedin,  -->
 					</div>
 				</div>
-				
-				<div class="timezone col-span-2 row-span-2 bg-amber-200 rounded-3xl text-center font-semibold grid place-items-center">
+
+				<!-- Timezone -->
+				<div
+					id="#mytimezone"
+					class="timezone col-span-2 row-span-2 hidden place-items-center rounded-3xl bg-green-200 p-4 text-center font-semibold md:grid"
+				>
 					<ul class="text-left">
 						<p>India</p>
-						<p id="time"> </p> 
-						<p>harsjoshi1614@gmail.com</p>
+						<p id="time"></p>
+						<p class="hidden lg:block">Hours : 9 am - 8 pm</p>
 					</ul>
 				</div>
 
-				<!-- About me Section ....???? -->
-				<div class="col-span-6 row-span-2">
-					<img src="http://ghchart.rshah.org/HarshitJoshi9152" alt="HarshitJoshi9152's Github chart" />
+				<!-- Github Contributions -->
+				<div id="#mycontributions" class="col-span-6 row-span-2">
+					<img
+						src="http://ghchart.rshah.org/HarshitJoshi9152"
+						alt="HarshitJoshi9152's Github chart"
+					/>
 				</div>
 			</div>
 		</section>
 
 		<!-- projects carousle and blog posts -->
-		<section></section>
+		<section class="responsive-container container mt-12">
+			<h2 class="text-left text-2xl font-semibold">My Projects</h2>
+		</section>
 
 		<!-- Blog Posts -->
 		<section></section>
+
+		<!-- timeline -->
+
+		<!-- hard memes -->
+		<!-- Add QUOTES to the CARD UI -->
+		<!-- Should i move the time thing to the Bio instead, Atleast on mobile ....???? -->
+		<!-- NonTechnicalBlogs Nah just make it a #tag -->
+		<!-- Todo Experiment -->
 		<script src="./index.js"></script>
 	</body>
 </html>
