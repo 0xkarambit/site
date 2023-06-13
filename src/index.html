@@ -13,10 +13,18 @@
 				/* box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
 					border-radius: 1.5rem; */
 
-				transition: all 0.2s;
+					transition: all 0.2s;
 			}
-			.bio-grid > *:hover {
+
+			.bio-grid > *:not(div.socials):hover {
 				transform: scale(1.02);
+			}
+			
+			div.socials > * {
+				transition: transform 0.4s;
+			}
+			div.socials > *:hover{
+				transform: scale(1.1) rotate(354deg);
 			}
 
 			/* This is a hack and i dont like ... it  */
@@ -28,10 +36,24 @@
 					max-width: 976px;
 				}
 			}
+
+			a.rounded-lg {
+				transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+				transition-duration: 500ms;
+				/* transition: all cubic-bezier(0, 0, 0.2, 1); */
+			}
+
+			h1 {
+				/* Name Text Gradient Effect */
+				/* background: linear-gradient(to right, #ff8a00 0%, #dd4c4f 100%); */
+				/* -webkit-background-clip: text; */
+				/* -webkit-text-fill-color: transparent; */
+			}
+
 		</style>
 		<!-- <script src="//unpkg.com/alpinejs" defer></script> -->
 	</head>
-	<body class="h-[3000px] bg-[#f7f7f7]">
+	<body class="bg-[#f7f7f7]">
 		<!-- Header Container -->
 		<div
 			id="nav"
@@ -87,7 +109,7 @@
 			<!-- Hamburger-links -->
 			<div
 				id="hamburger-links"
-				class="justify-left hidden flex-col items-center md:hidden"
+				class="hidden flex-col items-center md:hidden"
 			>
 				<a
 					class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
@@ -129,6 +151,7 @@
 						alt="My Image"
 					/>
 				</div>
+				<!-- Image for Mobile Viewport -->
 				<img
 					id="#myimg"
 					class="hidden h-full w-full rounded-3xl object-cover md:col-span-2 md:row-span-4 md:block"
@@ -137,20 +160,33 @@
 				/>
 
 				<!-- Name, Status, Bio etc...   -->
-				<div id="#mybio" class="col-span-6 row-span-4">
+				<div id="#mybio" class="col-span-6 row-span-3">
 					<div class="intro p-2">
-						<h2 class="w-fit text-5xl font-semibold text-stone-900">
-							Harshit Joshi
-						</h2>
+						<h1 class="w-fit text-5xl font-semibold text-stone-900">
+							Harshit Joshi,	
+						</h1>
 						<h3 class="mt-1 text-2xl">
 							Web Developer & Software Engineer
 						</h3>
-						<p class="mt-4 font-semibold">About me</p>
+						<!-- <p class="mt-4 font-semibold">About me</p> -->
 						<p class="mt-1 text-lg">
-							I like writing code.. and building projects..
+							<!-- Self taught, Reach out for collaboration -->
+							I like coding and building projects. Interested in Game Dev, Web Dev and Machine Learning
+						</p>
+						<p class="mt-1 text-lg">
+							Currently Learning: Unity & Machine Learning
 						</p>
 						<!-- TODO: add socials and insta, discord, github, twitter, linkedin,  -->
 					</div>
+				</div>
+
+				<div class="socials flex justify-start gap-4 col-span-6 row-span-1 ml-3 items-center">
+					<img src="./assets/logo-instagram.png" alt="" class="w-10 rounded-xl" title="@harshit_.dev">
+					<img src="./assets/logo-discord.svg" alt="" class="w-10 rounded-xl" title="Karambit#0228">
+					<img src="./assets/logo-github.png" alt="" class="w-10 rounded-xl" title="HarshitJoshi9152">
+					<img src="./assets/logo-twitter.png" alt="" class="w-10 rounded-xl" title="0xHarshitJoshi">
+					<img src="./assets/logo-linkedin.png" alt="" class="w-10 rounded-xl" title="harshit-joshi-dev">
+					<img src="./assets/logo-gmail.png" alt="" class="w-10 rounded-xl" title="harsjoshi1614@gmail.com">
 				</div>
 
 				<!-- Timezone -->
@@ -179,9 +215,11 @@
 		<section class="responsive-container container mt-12">
 			<h2 class="text-left text-2xl font-semibold">My Projects</h2>
 		</section>
-
+		
 		<!-- Blog Posts -->
-		<section></section>
+		<section class="responsive-container container mt-12">
+			<h2 class="text-left text-2xl font-semibold">Blog Posts</h2>
+		</section>
 
 		<!-- timeline -->
 
