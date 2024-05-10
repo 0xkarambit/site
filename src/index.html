@@ -63,25 +63,30 @@
 			<!-- Header -->
 			<div class="flex max-w-full items-center justify-between">
 				<!-- Site Icon -->
-				<div class="icon cursor-pointer text-lg">
+				<div class="icon cursor-pointer text-lg hidden md:block">
 					<img
 						src="./assets/me.jpg"
 						alt="Home"
 						class="aspect-square w-10 rounded-full object-cover"
 					/>
 				</div>
+				<div class="max-w-full items-center font-semibold">
+					Welcome to my Real Estate on the internet 👋
+				</div>
 				<!-- nav mobile Hamburger -->
 				<div
 					id="hamburger"
-					class="aspect-square w-10 cursor-pointer text-4xl md:hidden"
+					class="hidden aspect-square w-10 cursor-pointer text-4xl md:hidden"
 				>
 					☰
 				</div>
 				<!-- nav bar -->
+				<div>🔪</div>
 				<div
-					class="hidden max-w-full justify-evenly gap-2 text-lg md:flex"
+					class="hidden max-w-full justify-evenly gap-2 text-lg"
 				>
-					<a
+					<!-- class="hidden max-w-full justify-evenly gap-2 text-lg md:flex" -->
+					<!-- <a
 						class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
 						href="/blog"
 						>Blog</a
@@ -90,7 +95,7 @@
 						class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
 						href="/projects"
 						>Projects</a
-					>
+					> -->
 					<a
 						class="rounded-lg p-2 px-3 font-medium text-primary hover:bg-primary hover:text-slate-50"
 						href="https://github.com/HarshitJoshi9152"
@@ -172,22 +177,32 @@
 						<!-- <p class="mt-4 font-semibold">About me</p> -->
 						<p class="mt-1 text-lg">
 							<!-- Self taught, Reach out for collaboration -->
-							I like coding and building projects. Interested in Game Dev, Web Dev and Machine Learning
+							<!-- Building, Breaking and Hacking cool stuff -->
+							A bunch of bytes surfing on the internet
+						</p>
+						<div class="mt-1 text-lg">
+							I like building and disecting software, websites & games
+						</div>
+						<p class="mt-1 text-lg">
+							<!-- Currently Learning: Unity & Machine Learning -->
+							Languages: JS/TS, Python, Rust, Haskell, C/C++ ...
 						</p>
 						<p class="mt-1 text-lg">
-							Currently Learning: Unity & Machine Learning
+							You can catch me hanging on IRC servers and programming discord servers
+						</p>
+						<p class="mt-1 text-lg">
+							My handle is @karambit, 👋 me if you see me !
 						</p>
 					</div>
 				</div>
 
 				<!-- Socials -->
 				<div class="socials flex justify-start gap-4 col-span-6 row-span-1 ml-3 items-center">
-					<a target="_blank" rel="noopener noreferrer" href="https://instagram.com/harshit_.dev"><img src="./assets/socials/logo-instagram.png" alt="" class="w-10 rounded-xl" title="@harshit_.dev"></a>
-					<a target="_blank" rel="noopener noreferrer" href="https://discordapp.com/users/Karambit#0228"><img src="./assets/socials/logo-discord.png" alt="" class="w-10 rounded-xl" title="Karambit#0228"></a>
 					<a target="_blank" rel="noopener noreferrer" href="https://github.com/HarshitJoshi9152"><img src="./assets/socials/logo-github.png" alt="" class="w-10 rounded-xl" title="HarshitJoshi9152"></a>
-					<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/0xHarshitJoshi"><img src="./assets/socials/logo-twitter.png" alt="" class="w-10 rounded-xl" title="0xHarshitJoshi"></a>
 					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/harshit-joshi-dev"><img src="./assets/socials/logo-linkedin.png" alt="" class="w-10 rounded-xl" title="harshit-joshi-dev"></a>
 					<a target="_blank" rel="noopener noreferrer" href="mailto:harsjoshi1614@gmail.com"><img src="./assets/socials/logo-gmail.png" alt="" class="w-10 rounded-xl" title="harsjoshi1614@gmail.com"></a>
+					<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/0xkarambit"><img src="./assets/socials/logo-twitter.png" alt="" class="w-10 rounded-xl" title="0xkarambit"></a>
+					<a target="_blank" rel="noopener noreferrer" href="https://discordapp.com/users/Karambit#0228"><img src="./assets/socials/logo-discord.png" alt="" class="w-10 rounded-xl" title="Karambit#0228"></a>
 				</div>
 
 				<!-- Timezone -->
@@ -223,12 +238,12 @@
 		</section>
 
 		<!-- projects carousle and blog posts -->
-		<section class="responsive-container container mt-12">
+		<section class="hidden responsive-container container mt-12">
 			<h2 class="text-left text-2xl font-semibold">My Projects</h2>
 		</section>
 		
 		<!-- Blog Posts -->
-		<section class="responsive-container container mt-12">
+		<section class="hidden responsive-container container mt-12">
 			<h2 class="text-left text-2xl font-semibold">Blog Posts</h2>
 		</section>
 
